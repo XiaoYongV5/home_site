@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="张潇勇 / Max 的个人主页，展示个人介绍、运动写真和作品集入口。"
+    />
+    <title>潇十一郎个人主页</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <header class="site-header" aria-label="页面导航">
+      <a class="brand" href="#top" aria-label="回到顶部">
+        <span class="brand-mark">MX</span>
+        <span class="brand-text">潇十一郎</span>
+      </a>
+      <nav class="nav-actions" aria-label="主要操作">
+        <button class="icon-button sound-toggle" type="button" aria-pressed="false" aria-label="开启声音">
+          <span class="sound-wave" aria-hidden="true"></span>
+          <span class="sound-wave" aria-hidden="true"></span>
+          <span class="sound-wave" aria-hidden="true"></span>
+        </button>
+        <a class="portfolio-pill" href="http://ok.fuyue.xyz" target="_blank" rel="noreferrer">
+          <span>作品集</span>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero section" data-scene="hero">
+        <video
+          class="scene-video"
+          src="./ogg/hero-bg.mp4"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto"
+          aria-hidden="true"
+        ></video>
+        <div class="scene-shade" aria-hidden="true"></div>
+        <div class="hero-grid" aria-hidden="true"></div>
+
+        <div class="hero-content">
+          <p class="eyebrow">Shenzhen / IT / Motion Portfolio</p>
+          <h1>
+            <span>潇十一郎</span>
+            <span>Max</span>
+          </h1>
+          <p class="hero-copy">
+            IT民工，乐观、运动、坚持，也认真热爱一碗热干面。
+          </p>
+          <!-- <div class="hero-meta" aria-label="个人标签">
+            <span>IT民工</span>
+            <span>深圳</span>
+            <span>运动</span>
+            <span>坚持</span>
+          </div> -->
+        </div>
+
+        <div class="badge-stage">
+          <button class="badge-pull-tab" type="button" aria-label="拉下工牌">
+            <span class="badge-tab-dot" aria-hidden="true"></span>
+            <span class="badge-tab-text">MAX ID</span>
+            <span class="badge-tab-chevron" aria-hidden="true"></span>
+          </button>
+          <div class="lanyard"></div>
+          <article class="id-card">
+            <div class="id-card-glare"></div>
+            <div class="id-card-sheen"></div>
+            <div class="id-card-hole"></div>
+            <div class="id-holo"></div>
+            <div class="id-topline">
+              <span>PERSONAL ID</span>
+              <span>MAX-2026</span>
+            </div>
+            <div class="id-profile">
+              <div class="id-avatar">
+                <img src="./image/人物穿衣.png" alt="" />
+              </div>
+              <div>
+                <p class="id-name">张潇勇</p>
+                <p class="id-alias">Max</p>
+              </div>
+            </div>
+            <dl class="id-fields">
+              <div>
+                <dt>Role</dt>
+                <dd>IT民工</dd>
+              </div>
+              <div>
+                <dt>Base</dt>
+                <dd>深圳</dd>
+              </div>
+            </dl>
+            <div class="id-tags">
+              <span>乐观</span>
+              <span>运动</span>
+              <span>坚持</span>
+              <span>热干面爱好者</span>
+            </div>
+            <div class="id-barcode" aria-hidden="true">
+              <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            </div>
+          </article>
+        </div>
+
+        <div class="scroll-hint" aria-hidden="true">
+          <span></span>
+          <p>Scroll</p>
+        </div>
+      </section>
+
+      <section class="identity section" data-scene="identity">
+        <div class="sticky-scene identity-sticky">
+          <video
+            class="scene-video body-video"
+            src="./ogg/body-transition-bg.mp4"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="auto"
+            aria-hidden="true"
+          ></video>
+          <div class="scene-shade body-shade" aria-hidden="true"></div>
+
+          <div class="identity-copy depth-layer" data-depth="-0.16">
+            <p class="eyebrow">Daily mode to training mode</p>
+            <h2>从日常状态，进入更有力量的自己。</h2>
+            <p>
+              默认展示穿衣照，继续滚动时运动写真以柔和遮罩和透视位移出现，人物保持同一构图，过渡更丝滑。
+            </p>
+          </div>
+
+          <div class="figure-stage depth-layer" data-depth="0.32">
+            <div class="figure-perspective">
+              <img class="figure-img figure-dressed" src="./image/人物穿衣.png" alt="张潇勇穿衣人像" />
+              <img class="figure-img figure-fit" src="./image/人物写真.png" alt="张潇勇运动写真" />
+              <div class="figure-edge" aria-hidden="true"></div>
+            </div>
+          </div>
+
+          <div class="morph-meter" aria-label="写真渐变进度">
+            <span>Daily</span>
+            <div><i data-morph-meter></i></div>
+            <span>Training</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="portfolio" class="portfolio-gate section" data-scene="portfolio">
+        <div class="gate-bg" aria-hidden="true">
+          <div class="gate-tunnel">
+            <span class="tunnel-surface tunnel-ceiling"></span>
+            <span class="tunnel-surface tunnel-floor"></span>
+            <span class="tunnel-surface tunnel-left"></span>
+            <span class="tunnel-surface tunnel-right"></span>
+            <span class="tunnel-back"></span>
+            <span class="tunnel-light tunnel-light-a"></span>
+            <span class="tunnel-light tunnel-light-b"></span>
+          </div>
+        </div>
+        <div class="gate-content">
+          <p class="eyebrow">Portfolio gate</p>
+          <h2>继续看我的作品。</h2>
+          <p>
+            这里保留一个明确入口，后续可以继续扩展成完整作品集、项目详情页或横向案例墙。
+          </p>
+          <a class="gate-link" href="http://ok.fuyue.xyz" target="_blank" rel="noreferrer">
+            <span>打开作品集</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <div class="audio-toast" role="status" aria-live="polite"></div>
+    <script src="./app.js" defer></script>
+  </body>
+</html>
