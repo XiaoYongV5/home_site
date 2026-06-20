@@ -3330,3 +3330,47 @@ ConnectionAbortedError: [WinError 10053] ÄãµÄÖ÷»úÖÐµÄÈí¼þÖÐÖ¹ÁËÒ»¸öÒÑ½¨Á¢µÄÁ¬½Ó¡
 127.0.0.1 - - [20/Jun/2026 18:42:34] "GET /image/%E4%BA%BA%E7%89%A9%E7%A9%BF%E8%A1%A3-%E6%8A%A0%E5%9B%BE.png HTTP/1.1" 404 -
 127.0.0.1 - - [20/Jun/2026 18:42:34] code 404, message File not found
 127.0.0.1 - - [20/Jun/2026 18:42:34] "GET /image/%E4%BA%BA%E7%89%A9%E5%86%99%E7%9C%9F-%E6%8A%A0%E5%9B%BE.png HTTP/1.1" 404 -
+127.0.0.1 - - [20/Jun/2026 20:29:06] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [20/Jun/2026 20:31:25] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [20/Jun/2026 20:31:25] "GET /styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [20/Jun/2026 20:31:25] "GET /app.js HTTP/1.1" 200 -
+127.0.0.1 - - [20/Jun/2026 20:31:25] "GET /ogg/hero-bg.mp4 HTTP/1.1" 200 -
+127.0.0.1 - - [20/Jun/2026 20:31:25] "GET /image/%E4%BA%BA%E7%89%A9%E7%A9%BF%E8%A1%A3.webp HTTP/1.1" 200 -
+127.0.0.1 - - [20/Jun/2026 20:31:25] "GET /image/%E4%BA%BA%E7%89%A9%E7%A9%BF%E8%A1%A3.png HTTP/1.1" 200 -
+127.0.0.1 - - [20/Jun/2026 20:31:25] "GET /image/%E4%BA%BA%E7%89%A9%E5%86%99%E7%9C%9F.webp HTTP/1.1" 200 -
+127.0.0.1 - - [20/Jun/2026 20:31:25] "GET /ogg/horizon.mp3 HTTP/1.1" 200 -
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 7769)
+Traceback (most recent call last):
+  File "D:\progrom\python11\Lib\socketserver.py", line 691, in process_request_thread
+    self.finish_request(request, client_address)
+  File "D:\progrom\python11\Lib\http\server.py", line 1310, in finish_request
+    self.RequestHandlerClass(request, client_address, self,
+  File "D:\progrom\python11\Lib\http\server.py", line 671, in __init__
+    super().__init__(*args, **kwargs)
+  File "D:\progrom\python11\Lib\socketserver.py", line 755, in __init__
+    self.handle()
+  File "D:\progrom\python11\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "D:\progrom\python11\Lib\http\server.py", line 424, in handle_one_request
+    method()
+  File "D:\progrom\python11\Lib\http\server.py", line 678, in do_GET
+    self.copyfile(f, self.wfile)
+  File "D:\progrom\python11\Lib\http\server.py", line 877, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "D:\progrom\python11\Lib\shutil.py", line 200, in copyfileobj
+    fdst_write(buf)
+  File "D:\progrom\python11\Lib\socketserver.py", line 834, in write
+    self._sock.sendall(b)
+ConnectionResetError: [WinError 10054] Ô¶³ÌÖ÷»úÇ¿ÆÈ¹Ø±ÕÁËÒ»¸öÏÖÓÐµÄÁ¬½Ó¡£
+----------------------------------------
+127.0.0.1 - - [20/Jun/2026 20:31:25] "GET /ogg/hero-bg.mp4 HTTP/1.1" 200 -
+127.0.0.1 - - [20/Jun/2026 20:31:25] code 404, message File not found
+127.0.0.1 - - [20/Jun/2026 20:31:25] code 404, message File not found
+127.0.0.1 - - [20/Jun/2026 20:31:25] "GET /image/%E4%BA%BA%E7%89%A9%E7%A9%BF%E8%A1%A3-%E9%80%8F%E6%98%8E.png HTTP/1.1" 404 -
+127.0.0.1 - - [20/Jun/2026 20:31:25] "GET /image/%E4%BA%BA%E7%89%A9%E5%86%99%E7%9C%9F-%E9%80%8F%E6%98%8E.png HTTP/1.1" 404 -
+127.0.0.1 - - [20/Jun/2026 20:31:25] code 404, message File not found
+127.0.0.1 - - [20/Jun/2026 20:31:25] "GET /image/%E4%BA%BA%E7%89%A9%E7%A9%BF%E8%A1%A3-%E6%8A%A0%E5%9B%BE.png HTTP/1.1" 404 -
+127.0.0.1 - - [20/Jun/2026 20:31:25] code 404, message File not found
+127.0.0.1 - - [20/Jun/2026 20:31:25] "GET /image/%E4%BA%BA%E7%89%A9%E5%86%99%E7%9C%9F-%E6%8A%A0%E5%9B%BE.png HTTP/1.1" 404 -
+127.0.0.1 - - [20/Jun/2026 20:31:25] "GET /favicon.ico HTTP/1.1" 200 -

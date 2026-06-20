@@ -31,7 +31,7 @@
       </nav>
     </header>
 
-    <div class="badge-stage">
+    <div class="badge-stage is-hidden">
           <button class="badge-pull-tab" type="button" aria-label="拉下工牌">
             <span class="badge-tab-dot" aria-hidden="true"></span>
             <span class="badge-tab-text">MAX ID</span>
@@ -48,26 +48,21 @@
             <div class="id-card-sheen"></div>
             <div class="id-card-hole"></div>
             <div class="id-card-clip"></div>
-            <div class="id-holo"></div>
-            <div class="id-topline">
-              <span>PERSONAL ID</span>
-              <span>MAX-2026</span>
-            </div>
             <div class="id-profile">
               <div class="id-avatar">
                 <img src="./image/人物穿衣.png" alt="" />
               </div>
-              <div>
+              <div class="id-identity">
                 <p class="id-name">张潇勇</p>
-                <p class="id-alias">Max</p>
+                <p class="id-title">全栈玩家 · 代码诗人</p>
               </div>
             </div>
             <dl class="id-fields">
-              <div>
+              <div class="id-field-card id-field-position">
                 <dt>Role</dt>
                 <dd>IT民工</dd>
               </div>
-              <div>
+              <div class="id-field-card id-field-location">
                 <dt>Base</dt>
                 <dd>深圳</dd>
               </div>
@@ -78,10 +73,7 @@
               <span>乐观主义</span>
               <span>数字造梦</span>
             </div>
-            <div class="id-barcode" aria-hidden="true">
-              <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-              <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            </div>
+            <p class="id-subtitle">以代码解构问题，用设计传递温度</p>
           </article>
         </div>
 
@@ -102,7 +94,7 @@
         <div class="hero-grid" aria-hidden="true"></div>
 
         <div class="hero-content">
-          <p class="eyebrow">Shenzhen / IT / Motion Portfolio</p>
+          <p class="eyebrow">CODING DREAMS INTO REALITY</p>
           <h1>
             <span data-text="潇十一郎">潇十一郎</span>
             <span>Max</span>
@@ -233,11 +225,23 @@
             <span aria-hidden="true">↗</span>
           </a>
         </div>
+        <div class="beian-links" aria-label="备案信息">
+          <img src="./image/beian.jpg" alt="" aria-hidden="true" />
+          <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030702001437" rel="noreferrer">
+            粤公网安备 44030702001437号 |
+          </a>
+          <a target="_blank" href="http://beian.miit.gov.cn" rel="noreferrer">
+            粤ICP备18081555号
+          </a>
+        </div>
       </section>
     </main>
 
     <audio class="bgm-audio" src="./ogg/horizon.mp3" preload="auto" loop></audio>
     <div class="audio-toast" role="status" aria-live="polite"></div>
-    <script src="./app.js" defer></script>
+      <script type="text/javascript" src="./js/jquery.js"></script>
+    <script src="./js/app.js" defer></script>
+      <script type="text/javascript" src="layer/layer.js"></script>
+    <script type="text/javascript" src="./js/neko.js"></script>
   </body>
 </html>
