@@ -5,10 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="张潇勇 / Max 的个人主页，展示个人介绍、运动写真和作品集入口。"
+      content="张潇勇 / Max 的个人主页，在线客服系统，权限管理系统，官网，微信开发，微信自动回复工具，在线聊天，自动回复，群管理，速聊大师,聊天宝，机器人,客服，展示个人介绍、运动写真和作品集入口。"
     />
     <title>潇十一郎个人主页</title>
+    <link rel="preload" href="./ogg/hero-bg.mp4" as="video" type="video/mp4" />
+    <link rel="preload" href="./ogg/horizon.mp3" as="audio" type="audio/mpeg" />
+    <link rel="preload" href="./image/人物穿衣.webp" as="image" type="image/webp" fetchpriority="high" />
+    <link rel="preload" href="./image/人物写真.webp" as="image" type="image/webp" fetchpriority="high" />
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="shortcut icon" href="favicon.ico">
   </head>
   <body>
     <div class="grain" aria-hidden="true"></div>
@@ -23,56 +28,26 @@
           <span class="sound-wave" aria-hidden="true"></span>
           <span class="sound-wave" aria-hidden="true"></span>
         </button>
-        <a class="portfolio-pill" href="http://ok.fuyue.xyz" target="_blank" rel="noreferrer">
-          <span>作品集</span>
-          <span class="arrow" aria-hidden="true">↗</span>
-        </a>
       </nav>
     </header>
 
-    <main id="top">
-      <section class="hero section" data-scene="hero">
-        <video
-          class="scene-video"
-          src="./ogg/hero-bg.mp4"
-          autoplay
-          muted
-          loop
-          playsinline
-          preload="auto"
-          aria-hidden="true"
-        ></video>
-        <div class="scene-shade" aria-hidden="true"></div>
-        <div class="hero-grid" aria-hidden="true"></div>
-
-        <div class="hero-content">
-          <p class="eyebrow">Shenzhen / IT / Motion Portfolio</p>
-          <h1>
-            <span>潇十一郎</span>
-            <span>Max</span>
-          </h1>
-          <p class="hero-copy">
-            IT民工，乐观、运动、坚持，也认真热爱一碗热干面。
-          </p>
-          <!-- <div class="hero-meta" aria-label="个人标签">
-            <span>IT民工</span>
-            <span>深圳</span>
-            <span>运动</span>
-            <span>坚持</span>
-          </div> -->
-        </div>
-
-        <div class="badge-stage">
+    <div class="badge-stage">
           <button class="badge-pull-tab" type="button" aria-label="拉下工牌">
             <span class="badge-tab-dot" aria-hidden="true"></span>
             <span class="badge-tab-text">MAX ID</span>
             <span class="badge-tab-chevron" aria-hidden="true"></span>
           </button>
-          <div class="lanyard"></div>
+          <div class="lanyard" aria-hidden="true">
+            <span class="lanyard-strap lanyard-strap-left"></span>
+            <span class="lanyard-strap lanyard-strap-right"></span>
+            <span class="lanyard-ring"></span>
+            <span class="lanyard-clip"></span>
+          </div>
           <article class="id-card">
             <div class="id-card-glare"></div>
             <div class="id-card-sheen"></div>
             <div class="id-card-hole"></div>
+            <div class="id-card-clip"></div>
             <div class="id-holo"></div>
             <div class="id-topline">
               <span>PERSONAL ID</span>
@@ -98,16 +73,76 @@
               </div>
             </dl>
             <div class="id-tags">
-              <span>乐观</span>
-              <span>运动</span>
-              <span>坚持</span>
-              <span>热干面爱好者</span>
+              <span>全栈玩家</span>
+              <span>代码诗人</span>
+              <span>乐观主义</span>
+              <span>数字造梦</span>
             </div>
             <div class="id-barcode" aria-hidden="true">
+              <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
               <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
             </div>
           </article>
         </div>
+
+    <main id="top">
+      <section class="hero section" data-scene="hero">
+        <video
+          class="scene-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto"
+          aria-hidden="true"
+        >
+          <source src="./ogg/hero-bg.mp4" type="video/mp4" />
+        </video>
+        <div class="scene-shade" aria-hidden="true"></div>
+        <div class="hero-grid" aria-hidden="true"></div>
+
+        <div class="hero-content">
+          <p class="eyebrow">Shenzhen / IT / Motion Portfolio</p>
+          <h1>
+            <span data-text="潇十一郎">潇十一郎</span>
+            <span>Max</span>
+          </h1>
+          <p class="hero-copy">
+            <!-- IT民工，乐观、运动、坚持，也认真热爱一碗热干面。 -->
+          </p>
+          <div class="hero-actions">
+            <a class="portfolio-pill hero-portfolio-link" href="http://ok.fuyue.xyz" target="_blank" rel="noreferrer">
+              <span>打开作品集</span>
+              <span class="arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
+          <!-- <div class="hero-meta" aria-label="个人标签">
+            <span>IT民工</span>
+            <span>深圳</span>
+            <span>运动</span>
+            <span>坚持</span>
+          </div> -->
+        </div>
+
+        <div class="hero-figure-stage depth-layer" data-depth="0.22">
+          <div class="figure-perspective">
+            <picture>
+              <source srcset="./image/人物穿衣.webp" type="image/webp" />
+              <img class="figure-img figure-dressed" src="./image/人物穿衣.png" alt="张潇勇穿衣人像" decoding="async" fetchpriority="high" />
+            </picture>
+            <picture>
+              <source srcset="./image/人物写真.webp" type="image/webp" />
+              <img class="figure-img figure-fit" src="./image/人物写真.png" alt="张潇勇运动写真" decoding="async" fetchpriority="high" />
+            </picture>
+          </div>
+          <div class="morph-meter hero-morph-meter" aria-label="写真渐变进度">
+            <span>Daily</span>
+            <div><i data-morph-meter></i></div>
+            <span>Training</span>
+          </div>
+        </div>
+
+        
 
         <div class="scroll-hint" aria-hidden="true">
           <span></span>
@@ -115,61 +150,83 @@
         </div>
       </section>
 
-      <section class="identity section" data-scene="identity">
-        <div class="sticky-scene identity-sticky">
-          <video
-            class="scene-video body-video"
-            src="./ogg/body-transition-bg.mp4"
-            autoplay
-            muted
-            loop
-            playsinline
-            preload="auto"
-            aria-hidden="true"
-          ></video>
-          <div class="scene-shade body-shade" aria-hidden="true"></div>
-
-          <div class="identity-copy depth-layer" data-depth="-0.16">
-            <p class="eyebrow">Daily mode to training mode</p>
-            <h2>从日常状态，进入更有力量的自己。</h2>
-            <p>
-              默认展示穿衣照，继续滚动时运动写真以柔和遮罩和透视位移出现，人物保持同一构图，过渡更丝滑。
-            </p>
+      <section class="sports-transition section" data-scene="sports">
+        <div class="sports-sticky">
+          <div class="sports-field" aria-hidden="true">
+            <span class="field-line field-line-a"></span>
+            <span class="field-line field-line-b"></span>
+            <span class="field-line field-line-c"></span>
+            <span class="basket-hoop">
+              <span class="basket-backboard"></span>
+              <span class="basket-rim"></span>
+              <span class="basket-net"></span>
+            </span>
+            <span class="jump-rope jump-rope-a"></span>
+            <span class="jump-rope jump-rope-b"></span>
+            <span class="field-orbit"></span>
+            <span class="field-ball basketball-ball"></span>
+            <span class="motion-comet motion-comet-a"></span>
+            <span class="motion-comet motion-comet-b"></span>
+            <span class="action-player basketball-shooter" aria-hidden="true">
+              <span class="player-head"></span>
+              <span class="player-torso"></span>
+              <span class="player-arm player-arm-shoot"></span>
+              <span class="player-arm player-arm-guide"></span>
+              <span class="player-leg player-leg-front"></span>
+              <span class="player-leg player-leg-back"></span>
+            </span>
+            <span class="action-player rope-jumper" aria-hidden="true">
+              <span class="player-head"></span>
+              <span class="player-torso"></span>
+              <span class="player-arm player-arm-left"></span>
+              <span class="player-arm player-arm-right"></span>
+              <span class="player-leg player-leg-left"></span>
+              <span class="player-leg player-leg-right"></span>
+            </span>
           </div>
-
-          <div class="figure-stage depth-layer" data-depth="0.32">
-            <div class="figure-perspective">
-              <img class="figure-img figure-dressed" src="./image/人物穿衣.png" alt="张潇勇穿衣人像" />
-              <img class="figure-img figure-fit" src="./image/人物写真.png" alt="张潇勇运动写真" />
-              <div class="figure-edge" aria-hidden="true"></div>
+          <div class="sports-copy sports-panel depth-layer" data-depth="-0.12">
+            <p class="eyebrow">Motion state</p>
+            <div class="sports-card-grid" aria-label="运动入口">
+              <a class="sports-card" href="#portfolio">
+                <span>TRAINING</span>
+                <strong>燃动</strong>
+              </a>
+              <a class="sports-card" href="#portfolio">
+                <span>LIFESTYLE​</span>
+                <strong>在场</strong>
+              </a>
+              <a class="sports-card" href="http://ok.fuyue.xyz" target="_blank" rel="noreferrer">
+                <span>PURSUIT​</span>
+                <strong>追光</strong>
+              </a>
             </div>
-          </div>
-
-          <div class="morph-meter" aria-label="写真渐变进度">
-            <span>Daily</span>
-            <div><i data-morph-meter></i></div>
-            <span>Training</span>
           </div>
         </div>
       </section>
 
       <section id="portfolio" class="portfolio-gate section" data-scene="portfolio">
         <div class="gate-bg" aria-hidden="true">
-          <div class="gate-tunnel">
-            <span class="tunnel-surface tunnel-ceiling"></span>
-            <span class="tunnel-surface tunnel-floor"></span>
-            <span class="tunnel-surface tunnel-left"></span>
-            <span class="tunnel-surface tunnel-right"></span>
-            <span class="tunnel-back"></span>
-            <span class="tunnel-light tunnel-light-a"></span>
-            <span class="tunnel-light tunnel-light-b"></span>
+          <div class="pool-scene">
+            <span class="pool-paper"></span>
+            <span class="pool-lane lane-1"></span>
+            <span class="pool-lane lane-2"></span>
+            <span class="pool-lane lane-3"></span>
+            <span class="pool-lane lane-4"></span>
+            <span class="pool-ripple ripple-1"></span>
+            <span class="pool-ripple ripple-2"></span>
+            <span class="pool-wave pool-wave-cursor"></span>
+            <span class="pool-wave pool-wave-echo"></span>
+            <span class="pool-caustic caustic-a"></span>
+            <span class="pool-caustic caustic-b"></span>
           </div>
         </div>
         <div class="gate-content">
           <p class="eyebrow">Portfolio gate</p>
-          <h2>继续看我的作品。</h2>
+          <h2 class="gate-title" data-text="继续看我的作品" aria-label="继续看我的作品">
+            <span class="title-char" style="--i: 0" data-char="继">继</span><span class="title-char" style="--i: 1" data-char="续">续</span><span class="title-char" style="--i: 2" data-char="看">看</span><span class="title-char" style="--i: 3" data-char="我">我</span><span class="title-char" style="--i: 4" data-char="的">的</span><span class="title-char" style="--i: 5" data-char="作">作</span><span class="title-char" style="--i: 6" data-char="品">品</span>
+          </h2>
           <p>
-            这里保留一个明确入口，后续可以继续扩展成完整作品集、项目详情页或横向案例墙。
+           因异而美，各绽其华。心之所向，守若生命——失之，则生活无光。
           </p>
           <a class="gate-link" href="http://ok.fuyue.xyz" target="_blank" rel="noreferrer">
             <span>打开作品集</span>
@@ -179,6 +236,7 @@
       </section>
     </main>
 
+    <audio class="bgm-audio" src="./ogg/horizon.mp3" preload="auto" loop></audio>
     <div class="audio-toast" role="status" aria-live="polite"></div>
     <script src="./app.js" defer></script>
   </body>
